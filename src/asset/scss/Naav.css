@@ -1,0 +1,50 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+.navBar a {
+  color: #DD866E !important;
+  font-size: larger;
+  margin-left: 25px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navBar a:hover {
+  background-color: #DD866E;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: 600;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+.navBar .selected {
+  border-bottom: #DD866E 3px solid !important;
+}
+
+.MuiBadge-anchorOriginTopRightRectangle {
+  background-color: #DD866E;
+  color: white;
+}
+
+.Site {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.Site:hover {
+  color: #DD866E;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+/*# sourceMappingURL=Naav.css.map */

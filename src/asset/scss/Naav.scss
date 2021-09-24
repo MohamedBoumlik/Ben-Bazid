@@ -1,0 +1,48 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.navBar{
+
+    a{
+        color: #DD866E !important;
+        font-size: larger;
+        margin-left: 25px;
+        text-decoration: none;
+        padding: 5px;   
+    }
+
+    a:hover{
+        background-color: #DD866E;
+        border-radius: 5px;
+        color: white !important;
+        font-weight: 600;
+        transition: 200ms ease-in;
+
+    }
+
+    .selected{
+        border-bottom: #DD866E 3px solid !important;
+    }
+
+} 
+ 
+.MuiBadge-anchorOriginTopRightRectangle{
+    background-color: #DD866E;
+    color: white;
+}
+
+
+///////////@at-root
+.Site{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &:hover {
+        color: #DD866E;
+        transition: 200ms ease-in;
+    }
+}
+
