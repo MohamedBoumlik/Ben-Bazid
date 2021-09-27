@@ -31,18 +31,3 @@
     color: white;
 }
 
-
-///////////@at-root
-.Site{
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    &:hover {
-        color: #DD866E;
-        transition: 200ms ease-in;
-    }
-}
-

@@ -6,6 +6,7 @@ Heading,
 } from "./FooterStyles";
 import { RiCustomerService2Fill } from 'react-icons/ri';
 import { VscGlobe } from 'react-icons/vsc';
+import { FiMapPin } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
@@ -38,9 +39,10 @@ return (
                             <Heading>Site</Heading>
                         </div>
                         <div style={{textAlign: 'center', color: 'white'}}>
-                            <FooterLink as={Link} exact to="/home"><p>Accueil</p></FooterLink>
-                            <FooterLink as={Link} exact to="/about"><p>Produits</p></FooterLink>
-                            <FooterLink as={Link} exact to="/"><p>Services</p></FooterLink>
+                            <FooterLink style={{textDecoration: 'underline'}} as={Link} exact to="/home"><p>Accueil</p></FooterLink>
+                            <FooterLink style={{textDecoration: 'underline'}} as={Link} exact to="/about"><p>Produits</p></FooterLink>
+                            <FooterLink style={{textDecoration: 'underline'}} as={Link} exact to="/"><p>Services</p></FooterLink>
+                            <FooterLink style={{textDecoration: 'underline'}} as={Link} exact to="/contact"><p>Contact</p></FooterLink>
                         </div>
                     </div>
 
@@ -54,8 +56,21 @@ return (
                         </div>
                     </FooterLink>
                     <div style={{textAlign: 'center', color: 'white'}}>
-                        <p>+212 6********</p>
-                        <p>Ben-Bezide@gmail.com</p>
+                        <p>+212 524666403</p>
+                        <p>+212 635051819</p>
+                        <p>benbazide.guvenlik.@gmail.com</p>
+                    </div>
+                </Col>
+
+                <Col>
+                    <FooterLink href="#">
+                        <div className='d-flex m-auto'>
+                            <FiMapPin style={{color: '#DD866E',fontSize: '36px', marginTop: '3px', marginRight: '10px'}}/>
+                            <Heading>Localisation</Heading>
+                        </div>
+                    </FooterLink>
+                    <div style={{textAlign: 'center', color: 'white'}}>
+                        <p>33 Rue el Ouifaq Qu Salam Safi</p>
                     </div>
                 </Col>
             </Row>

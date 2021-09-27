@@ -1,11 +1,15 @@
 import React from "react";
 import Home from "./page/Home";
 import About from "./page/About";
-import { BrowserRouter, Route } from "react-router-dom";
 import Naav from "./components/Nav";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/asset/scss/Naav.scss';
 import Footer from "./components/Footer";
+import '../src/asset/scss/Footer.scss';
+import SideBar from "./components/SideBar";
+import '../src/asset/scss/SideBar.scss';
+import ContactForm from "./components/ContactForm";
+import { BrowserRouter, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -13,22 +17,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Naav />
-
+        {/* <SideBar/> */}
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={ContactForm} />
         </div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
-        <div style={{height:'100%}'}}>yzyzyzyzzy</div>
         <Footer />
       </div>
     </BrowserRouter>
