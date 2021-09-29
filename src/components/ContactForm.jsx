@@ -4,11 +4,11 @@ import { Form,Button } from "react-bootstrap";
 
 const ContactForm = () =>{
     return(
-        <div className='m-auto mt-5' style={{ width: '60%',backgroundColor:'#DD866E',padding: '38px', borderRadius:'6px'}}>
+        <div className='m-auto mt-5 mb-5' style={{ width: '60%',backgroundColor:'#DD866E',padding: '38px', borderRadius:'6px'}}>
             <Form>
-                <Form.Group>
-                    <img src="" alt="" />
-                </Form.Group>
+                <div className=" text-center mb-5">
+                    <img style={{width: '30%', height: '20%'}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="" />
+                </div>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Nom</Form.Label>
@@ -30,9 +30,9 @@ const ContactForm = () =>{
                     <Form.Control as="textarea" rows={3} placeholder="Entrer un message" name="message" />
                 </Form.Group>
                 <div className="text-center">
-                <Button  variant="outline-light" type="submit">
-                    Envoyer
-                </Button>
+                    <Button  variant="outline-light" type="submit">
+                        Envoyer
+                    </Button>
                 </div>
             </Form>
         </div>

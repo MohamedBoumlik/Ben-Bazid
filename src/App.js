@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./page/Home";
-import About from "./page/About";
 import Naav from "./components/Nav";
 import '../src/asset/scss/Naav.scss';
 import Footer from "./components/Footer";
@@ -21,7 +20,7 @@ function App() {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
-          <Route exact path="/about" component={About} />
+          {/* <Route exact path="/services" component={Service} /> */}
           <Route exact path="/contact" component={ContactForm} />
         </div>
         <Footer />
