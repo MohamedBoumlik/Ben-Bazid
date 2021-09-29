@@ -65,11 +65,22 @@ return(
 
     {/* -------------------------------------------------- About Us -------------------------------------------------- */}
 
+        <Container>
+            <Row className='description mt-5 mb-5 m-auto p-5' >
+                <Col className='m-auto'>
+                    <div className='p-4'>
+                        <h1 className='titles'>À propos de nous</h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eos laudantium illo, distinctio temporibus nisi doloribus? Illo atque, temporibus repellat consequatur incidunt similique sequi facilis quia, esse, cupiditate distinctio consequuntur laboriosam quaerat nam exercitationem fugit quasi laborum numquam quod ab odit facere beatae architecto. Eos veritatis pariatur velit doloribus praesentium ratione, itaque nam?
+                    </div>
+                </Col>
 
-        <div className="description mt-5 mb-5 m-auto p-5">
-            <h1 className='titles'>À propos de nous</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eos laudantium illo, distinctio temporibus nisi doloribus? Illo atque, temporibus repellat consequatur incidunt similique sequi facilis quia, esse, cupiditate distinctio consequuntur laboriosam quaerat nam exercitationem fugit quasi laborum numquam quod ab odit facere beatae architecto. Eos veritatis pariatur velit doloribus praesentium ratione, itaque nam?
-        </div>
+                <Col className='m-auto'>
+                    <div className='p-4 m-auto'>
+                         <img style={{objectFit: 'cover', width: '100%', height: '100%'}} src="https://images.pexels.com/photos/189474/pexels-photo-189474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                    </div>
+                </Col>
+            </Row>
+        </Container>
 
 
     {/* -------------------------------------------------- Cards -------------------------------------------------- */}

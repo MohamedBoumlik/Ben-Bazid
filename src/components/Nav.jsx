@@ -7,7 +7,7 @@ import { ShoppingCartOutlined } from "@material-ui/icons";
 const Naav = () => {
   return(
 
-    <div>
+    <div className='NAVE'>
         <Navbar bg="light" expand="lg">
             <Container>
               <Navbar.Brand as={Link}  to='/'>LOGO</Navbar.Brand>

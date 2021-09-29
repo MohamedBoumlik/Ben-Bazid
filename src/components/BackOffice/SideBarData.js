@@ -10,23 +10,27 @@ export const SideBarData = [
     {
         title:"Home",
         icon:<AiFillHome />,
-        link:"/home"
+        link:"admin/home"
     },
-    {
-        title:"Commandes",
-        icon:<ShoppingCartOutlined />,
-        link:"/commandes"
-    },
+    
     {
         title:"Produits",
         icon:<FaFireExtinguisher />,
-        link:"/Produits"
+        link:"/admin/produits"
     },
+
+    {
+        title:"Commandes",
+        icon:<ShoppingCartOutlined />,
+        link:"admin/commandes"
+    },
+
     {
         title:"Services",
         icon:<MdRoomService />,
-        link:"/Services"
+        link:"admin/Services"
     },
+
     {
         title:"Contact",
         icon:<RiCustomerService2Fill />,

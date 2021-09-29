@@ -14,9 +14,19 @@
   color: #DD866E;
   font-size: 2.5rem;
   text-decoration: underline;
+  margin-bottom: 8%;
 }
 
 .description {
   width: 85%;
+  border-radius: 15px;
+  padding: 10px;
+  -webkit-box-shadow: 8px 9px 6px 1px rgba(128, 128, 128, 0.555);
+          box-shadow: 8px 9px 6px 1px rgba(128, 128, 128, 0.555);
+}
+
+.card {
+  -webkit-box-shadow: 6px 6px 6px 1px rgba(128, 128, 128, 0.555);
+          box-shadow: 6px 6px 6px 1px rgba(128, 128, 128, 0.555);
 }
 /*# sourceMappingURL=Home.css.map */

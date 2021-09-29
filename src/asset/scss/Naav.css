@@ -2,6 +2,13 @@
   font-family: 'Lato', sans-serif;
 }
 
+.NAVE {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .navBar a {
   color: #DD866E !important;
   font-size: larger;
