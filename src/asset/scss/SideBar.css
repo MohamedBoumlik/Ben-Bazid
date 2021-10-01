@@ -13,6 +13,7 @@
   height: auto;
   width: 100%;
   padding: 0;
+  margin-top: 20%;
 }
 
 .sideBar .sideBarList .row {
@@ -38,6 +39,7 @@
 .sideBar .sideBarList .row:hover {
   cursor: pointer;
   background-color: #DD866E;
+  color: white;
 }
 
 .sideBar .sideBarList .row #icon {
@@ -60,5 +62,6 @@
 
 #active {
   background-color: #DD866E !important;
+  color: white;
 }
 /*# sourceMappingURL=SideBar.css.map */

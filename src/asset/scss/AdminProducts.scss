@@ -1,0 +1,43 @@
+
+td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+th{
+    vertical-align: middle;
+    text-align: center; 
+}
+
+Col{
+    margin: 0;
+    padding: 0;
+}
+
+.crud{
+    display: flex;
+    // float: right;
+    // height: 15px;
+
+    input[type=file]{
+        display: none;
+    }
+
+    label{
+        color: #DD866E;
+        position: sticky;
+        background-color: #e6a29199;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        border-radius: 7px;
+        height: 40px;
+        margin-top: 8px;
+        &:hover{
+            color: white;
+            background-color: #DD866E;
+            cursor: pointer;
+        }
+    }
+}

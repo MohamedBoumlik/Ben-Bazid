@@ -1,0 +1,51 @@
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+Col {
+  margin: 0;
+  padding: 0;
+}
+
+.crud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.crud input[type=file] {
+  display: none;
+}
+
+.crud label {
+  color: #DD866E;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #e6a29199;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  border-radius: 7px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.crud label:hover {
+  color: white;
+  background-color: #DD866E;
+  cursor: pointer;
+}
+/*# sourceMappingURL=AdminProducts.css.map */

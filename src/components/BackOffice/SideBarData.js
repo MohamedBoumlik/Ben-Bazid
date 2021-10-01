@@ -7,11 +7,6 @@ import { ShoppingCartOutlined } from "@material-ui/icons";
 
 
 export const SideBarData = [
-    {
-        title:"Home",
-        icon:<AiFillHome />,
-        link:"admin/home"
-    },
     
     {
         title:"Produits",
@@ -22,19 +17,19 @@ export const SideBarData = [
     {
         title:"Commandes",
         icon:<ShoppingCartOutlined />,
-        link:"admin/commandes"
+        link:"/admin/commandes"
     },
 
     {
         title:"Services",
         icon:<MdRoomService />,
-        link:"admin/Services"
+        link:"/admin/services"
     },
 
     {
         title:"Contact",
         icon:<RiCustomerService2Fill />,
-        link:"/Contact"
+        link:"/admin/contact"
     },
 ]
 

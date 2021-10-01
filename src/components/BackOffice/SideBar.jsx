@@ -1,13 +1,12 @@
 import React from 'react';
 import { SideBarData } from './SideBarData';
-import Produits from '../../page/backOfiice/Produits';
 
 function SideBar() {
     return (
         <div className="sideBar">
 
             <div className='text-center'>
-                <img  style={{width: '12rem',marginTop: "9px"}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="" />
+                <img  style={{width: '12rem',marginTop: "40px"}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="" />
             </div>
 
             <ul className="sideBarList">
@@ -22,7 +21,6 @@ function SideBar() {
                 }) }
             </ul>
 
-            <Produits/>
             
         </div>
     )

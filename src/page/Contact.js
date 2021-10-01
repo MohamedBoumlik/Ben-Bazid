@@ -1,14 +1,16 @@
 import React from "react";
 import '../asset/scss/Home.scss';
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
+import Naav from "../components/Nav";
 
 const Conatct = () => {
 return(
     <div>
 
-        <h2>home</h2>
+        <Naav/>
         <ContactForm/>
-        
+        <Footer/>
     </div>
 )
 
