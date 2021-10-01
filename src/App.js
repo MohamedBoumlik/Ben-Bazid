@@ -1,8 +1,7 @@
 import React from "react";
 import Home from "./page/Home";
-import Naav from "./components/Nav";
+import Products from "./page/Products";
 import '../src/asset/scss/Naav.scss';
-import Footer from "./components/Footer";
 import '../src/asset/scss/Footer.scss';
 import { BrowserRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +24,7 @@ function App() {
 
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
+          <Route exact path="/produits" component={Products} />
           <Route exact path="/contact" component={Contact} /> 
 
           {/* ------------ Admin Routes ------------ */}

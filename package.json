@@ -20,6 +20,7 @@
     "react-moving-text": "0.0.7",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-spring": "^9.0.0-rc.3",
     "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
   },

@@ -18,8 +18,8 @@ const Naav = () => {
                     margin: "auto",
                   }}>
                   <NavLink activeClassName="selected" as={Link} exact to='/home' >Accueil</NavLink>
-                  <NavLink activeClassName="selected" as={Link} exact to='/about' >Produits</NavLink>
-                  <NavLink activeClassName="selected" as={Link} exact to='/about' >Services</NavLink>
+                  <NavLink activeClassName="selected" as={Link} exact to='/produits' >Produits</NavLink>
+                  <NavLink activeClassName="selected" as={Link} exact to='/services' >Services</NavLink>
                   <NavLink activeClassName="selected" as={Link} exact to='/contact' >Contact</NavLink>
                 </Nav>
 

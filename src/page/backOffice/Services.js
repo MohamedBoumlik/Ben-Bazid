@@ -4,7 +4,6 @@ import SideBar from "../../components/BackOffice/SideBar";
 import '../../asset/scss/SideBar.scss';
 import '../../asset/scss/AdminProducts.scss';
 import {BiAddToQueue} from 'react-icons/bi';
-import {RiImageAddFill} from 'react-icons/ri';
 
 function Service() {
     return (
