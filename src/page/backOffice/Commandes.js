@@ -2,7 +2,9 @@ import React from 'react';
 import {  Button, Table,Col } from 'react-bootstrap';
 import SideBar from "../../components/BackOffice/SideBar";
 import '../../asset/scss/SideBar.scss';
-import '../../asset/scss/AdminProducts.scss'
+import '../../asset/scss/AdminProducts.scss';
+import {MdDeleteForever} from 'react-icons/md';
+import {FiEdit} from 'react-icons/fi';
 
 function Commandes() {
     return (
@@ -39,8 +41,8 @@ function Commandes() {
                                 <td>ccccc</td>
                                 <td>ccccc</td>
                                 <td className='d-flex text-center'>
-                                    <form> <Button variant="outline-danger m-2">Delete</Button> </form>
-                                    <a href=""> <Button variant="outline-info m-2">Edit</Button> </a>
+                                    <form> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
+                                    <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
                                 </td>
                             </tr>
                             <tr>

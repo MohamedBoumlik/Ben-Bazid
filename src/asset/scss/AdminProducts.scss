@@ -14,34 +14,6 @@ Col{
     padding: 0;
 }
 
-.crud{
-    display: flex;
-    // float: right;
-    // height: 15px;
-
-    input[type=file]{
-        display: none;
-    }
-
-    label{
-        color: #DD866E;
-        position: sticky;
-        background-color: #e6a29199;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        border-radius: 7px;
-        height: 40px;
-        margin-top: 8px;
-        &:hover{
-            color: white;
-            background-color: #DD866E;
-            cursor: pointer;
-        }
-    }
-}
-
 .overlay{
     width: 100vw;
     height: 100vh;
@@ -82,4 +54,42 @@ Col{
 
 .active-modal{
     overflow-y: hidden;
+}
+
+.add-img{
+
+    input[type=file]{
+        display: none;
+    }
+
+    #the-one{
+        color: #DD866E;
+        position: sticky;
+        background-color: #e6a29199;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 7px;
+        height: 40px;
+        margin-top: 8px;
+        &:hover{
+            color: white;
+            background-color: #DD866E;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.ajouter{
+    color: #DD866E;
+    background-color: #e6a29199;
+    border: hidden !important;
+
+    &:hover{
+        color: white;
+        background-color: #DD866E;
+        cursor: pointer;
+    }
 }

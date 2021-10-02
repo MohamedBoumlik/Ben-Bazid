@@ -6,6 +6,8 @@ import '../../asset/scss/AdminProducts.scss';
 import {BiAddToQueue} from 'react-icons/bi';
 import {RiImageAddFill} from 'react-icons/ri';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
+import {MdDeleteForever} from 'react-icons/md';
+import {FiEdit} from 'react-icons/fi';
 
 function Produits() {
 
@@ -35,12 +37,9 @@ function Produits() {
                     <div className='crud mt-3 mb-4 '>
 
                         <Button onClick={openModal} variant="outline-primary m-2 add "> <BiAddToQueue/>Ajouter</Button> 
-                        
-                        <input type='file' id='file' accept="image/*" />
-                        <label htmlFor="file" variant="outline-primary" ><RiImageAddFill/> Choisissez une photo</label>
 
                     </div>
-                    {/*  "short tenary operator" => if modal is true return (what's here) */}
+
                     {modal === true ? 
 
                         <div> 
@@ -51,30 +50,32 @@ function Produits() {
                                 <a onClick={openModal} className='close-modal'> <AiOutlineCloseCircle className='text-center'/></a> 
 
                                 <Form className='mt-4'>
+
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" />
-                                        <Form.Text className="text-muted">
-                                        We'll never share your email with anyone else.
-                                        </Form.Text>
+                                        <Form.Label>Nom De Produit</Form.Label>
+                                        <Form.Control type="text" placeholder="Entrez le nom" />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                                        <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" />
+                                    <Form.Group className="mb-3 add-img" controlId="formBasicEmail">
+                                        <label htmlFor="file">La Photo De Produit </label>
+                                        <input type='file' id='file' accept="image/*" />
+                                        <label htmlFor="file" variant="outline-primary" id='the-one'><RiImageAddFill/> Choisissez une photo</label>
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                        <Form.Check type="checkbox" label="Check me out" />
+
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                        <Form.Label>Description</Form.Label>
+                                        <Form.Control as="textarea" rows={3} placeholder="La description" name="message" />
                                     </Form.Group>
-                                    <Button variant="primary" type="submit">
-                                        Submit
-                                    </Button>
+                                    <div className="text-center">
+                                        <Button type="submit" variant="outline-light" className='ajouter'> Ajouter </Button>
+                                    </div>
+                                
                                 </Form>
 
                             </div>
 
                         </div>
-                     : null } 
+                    : null } 
                     
                     
 
@@ -99,8 +100,8 @@ function Produits() {
                                 <td>ddddddd</td>
                                 <td>ccccc</td>
                                 <td className='d-flex text-center'>
-                                    <form> <Button variant="outline-danger m-2">Supprimer</Button> </form>
-                                    <a href=""> <Button variant="outline-info m-2">Éditer</Button> </a>
+                                    <form> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
+                                    <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
                                 </td>
                             </tr>
                             <tr>

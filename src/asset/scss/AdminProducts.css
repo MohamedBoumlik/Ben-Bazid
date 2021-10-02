@@ -13,42 +13,6 @@ Col {
   padding: 0;
 }
 
-.crud {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.crud input[type=file] {
-  display: none;
-}
-
-.crud label {
-  color: #DD866E;
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: #e6a29199;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 200px;
-  border-radius: 7px;
-  height: 40px;
-  margin-top: 8px;
-}
-
-.crud label:hover {
-  color: white;
-  background-color: #DD866E;
-  cursor: pointer;
-}
-
 .overlay {
   width: 100vw;
   height: 100vh;
@@ -90,5 +54,47 @@ Col {
 
 .active-modal {
   overflow-y: hidden;
+}
+
+.add-img input[type=file] {
+  display: none;
+}
+
+.add-img #the-one {
+  color: #DD866E;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #e6a29199;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-radius: 7px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.add-img #the-one:hover {
+  color: white;
+  background-color: #DD866E;
+  cursor: pointer;
+}
+
+.ajouter {
+  color: #DD866E;
+  background-color: #e6a29199;
+  border: hidden !important;
+}
+
+.ajouter:hover {
+  color: white;
+  background-color: #DD866E;
+  cursor: pointer;
 }
 /*# sourceMappingURL=AdminProducts.css.map */

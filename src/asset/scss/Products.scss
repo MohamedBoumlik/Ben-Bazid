@@ -1,0 +1,38 @@
+.side{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: whitesmoke;
+    border-radius: 5px !important;
+    
+    p{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        &:hover{
+            cursor: pointer;
+            background-color: #e6a29199;
+            color: white;
+            border-radius: 9px;
+        }
+        
+    }
+    
+    a{
+        color: #DD866E;
+        text-decoration: none !important;
+        
+    }
+}
+
+.c_content{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.prod{
+    width: auto !important;
+}

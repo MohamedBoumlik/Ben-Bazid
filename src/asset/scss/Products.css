@@ -1,0 +1,53 @@
+.side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: whitesmoke;
+  border-radius: 5px !important;
+}
+
+.side p {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.side p:hover {
+  cursor: pointer;
+  background-color: #e6a29199;
+  color: white;
+  border-radius: 9px;
+}
+
+.side a {
+  color: #DD866E;
+  text-decoration: none !important;
+}
+
+.c_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.prod {
+  width: auto !important;
+}
+/*# sourceMappingURL=Products.css.map */
