@@ -40,6 +40,8 @@ function Produits() {
 
                     </div>
 
+                {/* -------------- Add product Form --------------*/}
+
                     {modal === true ? 
 
                         <div> 
@@ -77,7 +79,7 @@ function Produits() {
                         </div>
                     : null } 
                     
-                    
+                    {/* -------------- Table -------------- */}
 
                     <Table bordered hover className=' m-auto content mt-2 ' >
 

@@ -1,11 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Naav from '../components/Nav';
 import Footer from '../components/Footer';
-import { Card, Button, Row, Col, Container } from "react-bootstrap";
+import { Card, Button, Row, Col, Container} from "react-bootstrap";
 import '../asset/scss/Products.scss';
+import {AiOutlineCloseCircle} from 'react-icons/ai';
+
 
 
 function Products() {
+
+    const [modal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(!modal);
+    };
+
+    if(modal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
     return (
         <div>
 
@@ -13,6 +28,41 @@ function Products() {
 
             <Container>
 
+                {/* -------------- Product details --------------*/}
+
+                {modal === true ? 
+
+                    <div> 
+
+                        <div onClick={openModal} className="overlay"></div>
+                        
+                        <div className="modal-content">
+                            <a onClick={openModal} className='close-modal'> <AiOutlineCloseCircle className='text-center'/></a> 
+
+                            <Container>
+
+                                <Row>
+                                    <Col lg={6} sm={12}>
+                                        <img src="https://images.unsplash.com/photo-1575867094741-beeb9b072b83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" style={{width: '100%', height: '100%'}} className='m-auto' />
+                                    </Col>
+
+                                    <Col lg={6} sm={12}>
+                                        <p style= {{alignItems: 'center'}}> Lorem ipsum dolor sit  quas nobis fugiat, asperiores aliquid esse quaerat doloribus nam debitis exercitationem aspernatur neque? Perferendis est corrupti praesentium beatae, quibusdam quae delectus deserunt porro ullam atque quasi eveniet vero facilis ducimus blanditiis dignissimos velit aperiam quam quidem, ad pariatur. Debitis ipsam tempora minima doloremque nihil consequatur impedit culpa, cumque eius facere unde, ipsa ut delectus neque enim iusto! Deserunt minus deleniti consectetur eaque voluptatem ab nobis est commodi perferendis, voluptates animi aliquam vitae eveniet sit eligendi dolor ut nisi eum itaque libero porro atque. Quas. </p>
+                                    </Col>
+                                    
+                                    <div className='text-center mt-3'> <Button type="submit" variant="outline-light" className='ajouter'> Ajouter au panier </Button> </div>
+
+                                </Row>
+
+                            </Container>
+                            
+
+                        </div>
+
+                    </div>
+                : null } 
+
+                {/* --------------------- Cards --------------------- */}
 
                 <Row className='m-auto'>
   
@@ -37,7 +87,7 @@ function Products() {
                                         the card's content.
                                         </Card.Text>
                                         <div className="text-center">
-                                            <Button variant="outline-dark">Go somewhere</Button>
+                                            <Button variant="outline-dark" onClick={openModal} >Détail</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -53,7 +103,7 @@ function Products() {
                                         the card's content.
                                         </Card.Text>
                                         <div className="text-center">
-                                            <Button variant="outline-dark">Go somewhere</Button>
+                                            <a href="#"> <Button variant="outline-dark">Détail</Button> </a>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -69,7 +119,7 @@ function Products() {
                                         the card's content.
                                         </Card.Text>
                                         <div className="text-center">
-                                            <Button variant="outline-dark">Go somewhere</Button>
+                                            <Button variant="outline-dark">Détail</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -85,7 +135,7 @@ function Products() {
                                         the card's content.
                                         </Card.Text>
                                         <div className="text-center">
-                                            <Button variant="outline-dark">Go somewhere</Button>
+                                            <Button variant="outline-dark">Détail</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -101,7 +151,7 @@ function Products() {
                                         the card's content.
                                         </Card.Text>
                                         <div className="text-center">
-                                            <Button variant="outline-dark">Go somewhere</Button>
+                                            <Button variant="outline-dark">Détail</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>
