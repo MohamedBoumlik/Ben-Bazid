@@ -73,11 +73,13 @@
   background: #f1f1f1;
   padding: 28px;
   border-radius: 3px;
-  max-width: 50% !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 9999;
   -webkit-transition: all 0.45s;
   transition: all 0.45s;
-  margin-top: 60vh;
+  margin-top: 42vh;
 }
 
 .container .close-modal {
