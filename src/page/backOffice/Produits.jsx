@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Form,  Button, Table,Col } from 'react-bootstrap';
 import SideBar from "../../components/BackOffice/SideBar";
 import '../../asset/scss/SideBar.scss';
@@ -10,6 +10,19 @@ import {MdDeleteForever} from 'react-icons/md';
 import {FiEdit} from 'react-icons/fi';
 
 function Produits() {
+
+// ----------------------- fetch -----------------------
+
+    const [prods , setProds] = useState([])
+
+    useEffect(() => {
+        const url = 'http://127.0.0.1:8000/api/produit';
+        fetch(url)
+        .then(resp => resp.json())
+        .then(resp => setProds(resp))
+    },[])
+
+// ----------------------- modal -----------------------
 
     const [modal, setShowModal]= useState(false);
 
@@ -95,61 +108,23 @@ function Produits() {
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>pic</td>
-                                <td>Otto</td>
-                                <td>ddddddd</td>
-                                <td>ccccc</td>
-                                <td className='d-flex text-center'>
-                                    <form> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
-                                    <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>pic</td>
-                                <td>Otto</td>
-                                <td>ddddddd</td>
-                                <td>ccccc</td>
-                                <td className='d-flex text-center'>
-                                    <form> <Button variant='outline-danger m-2'>Delete</Button> </form>
-                                    <a href=""><Button variant='outline-info m-2'>Edit</Button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>pic</td>
-                                <td>Otto</td>
-                                <td>ddddddd</td>
-                                <td>ccccc</td>
-                                <td className='d-flex text-center'>
-                                    <form> <Button variant='outline-danger m-2'>Delete</Button> </form>
-                                    <a href=""><Button variant='outline-info m-2'>Edit</Button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>pic</td>
-                                <td>Otto</td>
-                                <td>ddddddd</td>
-                                <td>ccccc</td>
-                                <td className='d-flex '>
-                                    <form> <Button variant='outline-danger m-2'>Delete</Button> </form>
-                                    <a href=""><Button variant='outline-info m-2'>Edit</Button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>pic</td>
-                                <td>Otto</td>
-                                <td>ddddddd</td>
-                                <td>ccccc</td>
-                                <td className='d-flex'>
-                                    <form> <Button variant='outline-danger m-2'>Delete</Button> </form>
-                                    <a href=""><Button variant='outline-info m-2'>Edit</Button></a>
-                                </td>
-                            </tr>
+
+                            {prods.map(prod =>
+
+                                <tr>
+                                    <td>{prod.id}</td>
+                                    <td>{prod.pic}</td>
+                                    <td>{prod.name}</td>
+                                    <td>{prod.description}</td>
+                                    <td>{prod.categorie.type}</td>
+                                    <td className='d-flex text-center'>
+                                        <form className='action'> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
+                                        <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
+                                    </td>
+                                </tr>
+
+                            )}
+
                         </tbody>
 
                     </Table>

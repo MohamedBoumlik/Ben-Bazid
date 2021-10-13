@@ -1,4 +1,4 @@
-.side {
+.container .side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +13,7 @@
   border-radius: 5px !important;
 }
 
-.side p {
+.container .side p {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,19 +28,19 @@
   font-size: large;
 }
 
-.side p:hover {
+.container .side p:hover {
   cursor: pointer;
   background-color: #e6a29199;
   color: white;
   border-radius: 9px;
 }
 
-.side a {
+.container .side a {
   color: #DD866E;
   text-decoration: none !important;
 }
 
-.c_content {
+.container .c_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,11 +48,11 @@
       flex-wrap: wrap;
 }
 
-.prod {
+.container .prod {
   width: auto !important;
 }
 
-.overlay {
+.container .overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -64,9 +64,8 @@
   z-index: 9999;
 }
 
-.modal-content {
+.container .content {
   position: absolute;
-  top: 45% !important;
   left: 50% !important;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -74,11 +73,14 @@
   background: #f1f1f1;
   padding: 28px;
   border-radius: 3px;
-  max-width: 60% !important;
+  max-width: 50% !important;
   z-index: 9999;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+  margin-top: 60vh;
 }
 
-.close-modal {
+.container .close-modal {
   position: absolute;
   top: -4px;
   right: 1px;
@@ -88,7 +90,7 @@
   text-decoration: none;
 }
 
-.close-modal:hover {
+.container .close-modal:hover {
   color: red;
 }
 /*# sourceMappingURL=Products.css.map */
