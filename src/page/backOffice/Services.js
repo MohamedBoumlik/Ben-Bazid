@@ -7,8 +7,37 @@ import {BiAddToQueue} from 'react-icons/bi';
 import {MdDeleteForever} from 'react-icons/md';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
 import {FiEdit} from 'react-icons/fi';
+import axios from 'axios';
 
 function Service() {
+
+// ----------------------- store -----------------------
+
+    const url = "http://127.0.0.1:8000/api/services/store"
+    const [data,setData] = useState({
+        name: "",
+        description: "",
+    })
+
+    function submit(e){
+        e.preventDefault();
+        axios.post(url,{
+            name: data.name,
+            description: data.description,
+        })
+        .then(resp => resp.json())
+        .then(resp => setData(resp))
+    }
+
+    function handle(e){
+        const newdata = {...data}
+        newdata[e.target.id] = e.target.value
+        setData(newdata)
+        console.log(newdata)
+    }
+
+    
+// ----------------------- modal -----------------------
 
     const [modal, setShowModal]= useState(false);
 
@@ -48,16 +77,16 @@ function Service() {
                             <div className="modal-content">
                                 <a onClick={openModal} className='close-modal'> <AiOutlineCloseCircle className='text-center'/></a> 
 
-                                <Form className='mt-4'>
+                                <Form className='mt-4' onSubmit={submit}>
 
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Titre De Service</Form.Label>
-                                        <Form.Control type="text" placeholder="Entrez le titre" />
+                                        <Form.Control onChange={handle} id='name' value={data.name} type="text" placeholder="Entrez le titre" />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Description</Form.Label>
-                                        <Form.Control as="textarea" rows={3} placeholder="La description" name="message" />
+                                        <Form.Control onChange={handle} id='description' value={data.description} as="textarea" rows={3} placeholder="La description" name="description" />
                                     </Form.Group>
 
                                     <div className="text-center">

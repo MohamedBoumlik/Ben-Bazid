@@ -8,6 +8,7 @@ import {RiImageAddFill} from 'react-icons/ri';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
 import {MdDeleteForever} from 'react-icons/md';
 import {FiEdit} from 'react-icons/fi';
+import axios from 'axios';
 
 function Produits() {
 
@@ -21,6 +22,33 @@ function Produits() {
         .then(resp => resp.json())
         .then(resp => setProds(resp))
     },[])
+
+// ----------------------- store -----------------------
+
+    const url = "http://127.0.0.1:8000/api/produit/store"
+    const [data,setData] = useState({
+        name: "",
+        pic: "",
+        description: "",
+    })
+
+    function submit(e){
+        e.preventDefault();
+        axios.post(url,{
+            name: data.name,
+            pic: data.pic,
+            description: data.description,
+        })
+        .then(resp => resp.json())
+        .then(resp => setData(resp))
+    }
+
+    function handle(e){
+        const newdata = {...data}
+        newdata[e.target.id] = e.target.value
+        setData(newdata)
+        console.log(newdata)
+    }
 
 // ----------------------- modal -----------------------
 
@@ -64,22 +92,22 @@ function Produits() {
                             <div className="modal-content">
                                 <a onClick={openModal} className='close-modal'> <AiOutlineCloseCircle className='text-center'/></a> 
 
-                                <Form className='mt-4'>
+                                <Form className='mt-4' onSubmit={submit}>
 
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Nom De Produit</Form.Label>
-                                        <Form.Control type="text" placeholder="Entrez le nom" />
+                                        <Form.Control onChange={handle} id="name" type="text" placeholder="Entrez le nom" value={data.name} />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3 add-img" controlId="formBasicEmail">
                                         <label htmlFor="file">La Photo De Produit </label>
-                                        <input type='file' id='file' accept="image/*" />
+                                        <input onChange={handle} id="pic" type='file' id='file' accept="image/*" value={data.pic} />
                                         <label htmlFor="file" variant="outline-primary" id='the-one'><RiImageAddFill/> Choisissez une photo</label>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Description</Form.Label>
-                                        <Form.Control as="textarea" rows={3} placeholder="La description" name="message" />
+                                        <Form.Control onChange={handle} id="description" as="textarea" rows={3} placeholder="La description" name="description" value={data.description}/>
                                     </Form.Group>
                                     <div className="text-center">
                                         <Button type="submit" variant="outline-light" className='ajouter'> Ajouter </Button>
