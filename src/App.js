@@ -11,6 +11,7 @@ import ContactUs from "./page/backOffice/Contact";
 import Service from "./page/backOffice/Services";
 import Contact from "./page/Contact";
 import Services from "./page/Services";
+import ProductShow from "./page/ProductShow";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/produits" component={Products} />
+          <Route exact path="/produits/:id" component={ProductShow} />
           <Route exact path="/contact" component={Contact} /> 
 
           {/* ------------ Admin Routes ------------ */}

@@ -40,45 +40,5 @@
     .prod{
         width: auto !important;
     }
-    
-    .overlay{
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: fixed;
-        background-color: rgba(49,49,49,0.8);
-        z-index: 9999;
-    }
-    
-    .content {
-        position: absolute;
-        left: 50% !important;
-        transform: translate(-50%, -50%);
-        line-height: 1.4;
-        background: #f1f1f1;
-        padding: 28px;
-        border-radius: 3px;
-        width: fit-content;
-        z-index: 9999;
-        transition: all 0.45s;
-        margin-top: 42vh;
-    }
-    
-    .close-modal {
-        position: absolute;
-        top: -4px;
-        right: 1px;
-        padding: 5px 7px;
-        font-size: 29px;
-        color: black;
-        text-decoration: none;
-        &:hover{
-            color: red;
-        }
-    
-    }
 }
 
