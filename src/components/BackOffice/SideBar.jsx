@@ -6,7 +6,7 @@ function SideBar() {
         <div className="sideBar">
 
             <div className='text-center'>
-                <img  style={{width: '12rem',marginTop: "40px"}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="" />
+                <img  style={{width: '12rem',marginTop: "40px"}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="fire" />
             </div>
 
             <ul className="sideBarList">

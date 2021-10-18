@@ -7,7 +7,7 @@ const ContactForm = () =>{
         <div className='m-auto mt-5 mb-5' style={{ width: '60%',backgroundColor:'#DD866E',padding: '38px', borderRadius:'6px'}}>
             <Form>
                 <div className=" text-center mb-5">
-                    <img style={{width: '30%', height: '20%'}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="" />
+                    <img style={{width: '30%', height: '20%'}} src="https://www.pngkit.com/png/detail/78-788100_fire-logo-png-svg-free-download-fire-logo.png" alt="fire" />
                 </div>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -17,13 +17,13 @@ const Naav = () => {
                 <Nav className="me-auto navBar" style={{
                     margin: "auto",
                   }}>
-                  <NavLink activeClassName="selected" as={Link} exact to='/home' >Accueil</NavLink>
+                  <NavLink activeClassName="selected" as={Link} exact to='/' >Accueil</NavLink>
                   <NavLink activeClassName="selected" as={Link} exact to='/produits' >Produits</NavLink>
                   <NavLink activeClassName="selected" as={Link} exact to='/services' >Services</NavLink>
                   <NavLink activeClassName="selected" as={Link} exact to='/contact' >Contact</NavLink>
                 </Nav>
 
-                <Link >
+                <Link exact to='/cart' >
 
                   <Badge badgeContent={4} style={{
                       color: '#DD866E',

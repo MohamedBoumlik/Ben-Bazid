@@ -78,7 +78,7 @@ return(
 
                 <Col lg={5} md={12} className='m-auto'>
                     <div className='p-4 m-auto'>
-                         <img style={{objectFit: 'cover', width: '100%', height: '100%'}} src="https://images.pexels.com/photos/189474/pexels-photo-189474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                         <img style={{objectFit: 'cover', width: '100%', height: '100%'}} src="https://images.pexels.com/photos/189474/pexels-photo-189474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="fire" />
                     </div>
                 </Col>
             </Row>
@@ -92,7 +92,7 @@ return(
             <Row className='m-auto'>
                 <Col>
                     <Card style={{ width: '18rem'}} className='m-auto mt-3 mb-3 card'>
-                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1575867094741-beeb9b072b83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
+                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1575867094741-beeb9b072b83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt='fire'/>
                         <Card.Body>
                             <Card.Title className='text-center'>Card Title</Card.Title>
                             <Card.Text>
@@ -108,7 +108,7 @@ return(
                 
                 <Col>
                     <Card style={{ width: '18rem'}} className='m-auto mt-3 mb-3 card'>
-                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1529220502050-f15e570c634e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80"/>
+                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1529220502050-f15e570c634e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt='fire'/>
                         <Card.Body>
                             <Card.Title className='text-center'>Card Title</Card.Title>
                             <Card.Text>
@@ -124,7 +124,7 @@ return(
 
                 <Col>
                     <Card style={{ width: '18rem' }} className='m-auto mt-3 mb-3 card3'>
-                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1591557562184-96fd1b4cf797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"/>
+                        <Card.Img variant="top" style= {{height: '13rem'}} src="https://images.unsplash.com/photo-1591557562184-96fd1b4cf797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80" alt='fire'/>
                         <Card.Body>
                             <Card.Title className='text-center'>Card Title</Card.Title>
                             <Card.Text>

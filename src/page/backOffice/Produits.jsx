@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Form,  Button, Table,Col } from 'react-bootstrap';
+import {Form,  Button, Table,Col, Spinner } from 'react-bootstrap';
 import SideBar from "../../components/BackOffice/SideBar";
 import '../../asset/scss/SideBar.scss';
 import '../../asset/scss/AdminProducts.scss';
@@ -14,13 +14,15 @@ function Produits() {
 
 // ----------------------- fetch -----------------------
 
-    const [prods , setProds] = useState([])
+    const [loading, setLoading] = useState (false);
+    const [prods , setProds] = useState([]);
 
     useEffect(() => {
-        const url = 'http://127.0.0.1:8000/api/produit';
-        fetch(url)
-        .then(resp => resp.json())
-        .then(resp => setProds(resp))
+        
+        axios.get('http://127.0.0.1:8000/api/produit')
+        .then(resp => setProds(resp.data))
+        setLoading(true)
+
     },[])
 
 // ----------------------- store -----------------------
@@ -121,41 +123,44 @@ function Produits() {
                     : null } 
                     
                     {/* -------------- Table -------------- */}
+                    {loading ? 
 
-                    <Table bordered hover className=' m-auto content mt-2 ' >
+                        <Table bordered hover className=' m-auto content mt-2 ' >
 
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Photo</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Catégorie</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            {prods.map(prod =>
-
+                            <thead>
                                 <tr>
-                                    <td>{prod.id}</td>
-                                    <td>{prod.pic}</td>
-                                    <td>{prod.name}</td>
-                                    <td>{prod.description}</td>
-                                    <td>{prod.categorie.type}</td>
-                                    <td className='d-flex text-center'>
-                                        <form className='action'> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
-                                        <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
-                                    </td>
+                                    <th>Id</th>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Catégorie</th>
+                                    <th>Action</th>
                                 </tr>
+                            </thead>
 
-                            )}
+                                <tbody>
 
-                        </tbody>
+                                    {prods.map(prod =>
 
-                    </Table>
+                                        <tr>
+                                            <td>{prod.id}</td>
+                                            <td>{prod.pic}</td>
+                                            <td>{prod.name}</td>
+                                            <td>{prod.description}</td>
+                                            <td>{prod.categorie.type}</td>
+                                            <td className='d-flex text-center'>
+                                                <form className='action'> <Button variant="outline-danger m-2"><MdDeleteForever className='m-1' />Supprimer</Button> </form>
+                                                <a href=""> <Button variant="outline-info m-2"><FiEdit className='m-1' />Éditer</Button> </a>
+                                            </td>
+                                        </tr>
+
+                                    )}
+
+                                </tbody>
+
+                        </Table>
+                    :   <Spinner animation="border" variant="danger" style={{marginLeft: '49%', marginTop: '10%'}} /> }
+
                 </Col>
 
             </div>
