@@ -13,6 +13,7 @@ import Contact from "./page/Contact";
 import Services from "./page/Services";
 import ProductShow from "./page/ProductShow";
 import Cart from "./page/Cart";
+import Login from "./page/Login";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/cart" component={Cart} /> 
 
           {/* ------------ Admin Routes ------------ */}
+          <Route exact path='/admin' component={Login}/>
           <Route exact path='/admin/produits' component={Produits}/>
           <Route exact path="/admin/commandes" component={Commandes}/>
           <Route exact path="/admin/services" component={Service}/>

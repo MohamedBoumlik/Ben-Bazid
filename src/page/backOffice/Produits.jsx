@@ -9,6 +9,8 @@ import {AiOutlineCloseCircle} from 'react-icons/ai';
 import {MdDeleteForever} from 'react-icons/md';
 import {FiEdit} from 'react-icons/fi';
 import axios from 'axios';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 function Produits() {
 
@@ -109,7 +111,8 @@ function Produits() {
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Description</Form.Label>
-                                        <Form.Control onChange={handle} id="description" as="textarea" rows={3} placeholder="La description" name="description" value={data.description}/>
+                                        {/* <Form.Control onChange={handle} id="description" as="textarea" rows={3} placeholder="La description" name="description" value={data.description}/> */}
+                                        <CKEditor editor={ ClassicEditor } />
                                     </Form.Group>
                                     <div className="text-center">
                                         <Button type="submit" variant="outline-light" className='ajouter'> Ajouter </Button>

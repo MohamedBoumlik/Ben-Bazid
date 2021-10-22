@@ -1,7 +1,6 @@
 import React from "react";
 import { Form,Button } from "react-bootstrap";
 
-
 const ContactForm = () =>{
     return(
         <div className='m-auto mt-5 mb-5' style={{ width: '60%',backgroundColor:'#DD866E',padding: '38px', borderRadius:'6px'}}>
@@ -29,6 +28,8 @@ const ContactForm = () =>{
                     <Form.Label>Message</Form.Label>
                     <Form.Control as="textarea" rows={3} placeholder="Entrer un message" name="message" />
                 </Form.Group>
+                {/* <CKEditor editor={ ClassicEditor }/> */}
+
                 <div className="text-center">
                     <Button  variant="outline-light" type="submit">
                         Envoyer
